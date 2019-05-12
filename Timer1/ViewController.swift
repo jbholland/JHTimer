@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 import MediaPlayer
-import UserNotifications
+
 
 
 
@@ -53,31 +53,7 @@ class ViewController: UIViewController {
         updateLabel()
     }
     
-    func dequeueBellInBackground() {
-        if (!settingHolder.paused) {
-            let center = UNUserNotificationCenter.current()
-            center.removePendingNotificationRequests(withIdentifiers: ["Bell"])
-            print("cancelled notification")
-        }
-    }
-    func queueBellInBackground() {
-        if (!settingHolder.paused) {
-            
-            let interval:TimeInterval =  TimeInterval(settingHolder.timeRemaining)
-            let content = UNMutableNotificationContent()
-            content.sound = UNNotificationSound(named: UNNotificationSoundName(rawValue: "ting.caf"))
-            print("setting notification center  seconds: \(settingHolder.timeRemaining)")
-            let trigger = UNTimeIntervalNotificationTrigger(timeInterval:interval, repeats: false)
-            let request = UNNotificationRequest(identifier: "Bell", content: content, trigger: trigger)
-            let center = UNUserNotificationCenter.current()
-            center.add(request) { (error : Error?) in
-                if let theError = error {
-                    print("error adding request:\(theError)")// Handle any errors
-                }
-            }
-            print("added request to notification center")
-        }
-    }
+    
     override func viewWillDisappear(_ animated: Bool) {
         settingHolder.timer?.invalidate()
     }

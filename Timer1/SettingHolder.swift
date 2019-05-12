@@ -9,6 +9,7 @@
 import Foundation
 import AVFoundation
 import MediaPlayer
+import UserNotifications
 
 
 class SettingHolder {
@@ -126,7 +127,31 @@ class SettingHolder {
             }
         }
     }
-
+    func dequeueBellInBackground() {
+        if (!paused) {
+            let center = UNUserNotificationCenter.current()
+            center.removePendingNotificationRequests(withIdentifiers: ["Bell"])
+            print("cancelled notification")
+        }
+    }
+    func queueBellInBackground() {
+        if (!paused) {
+            
+            let interval:TimeInterval =  TimeInterval(timeRemaining)
+            let content = UNMutableNotificationContent()
+            content.sound = UNNotificationSound(named: UNNotificationSoundName(rawValue: "ting.caf"))
+            print("setting notification center  seconds: \(timeRemaining)")
+            let trigger = UNTimeIntervalNotificationTrigger(timeInterval:interval, repeats: false)
+            let request = UNNotificationRequest(identifier: "Bell", content: content, trigger: trigger)
+            let center = UNUserNotificationCenter.current()
+            center.add(request) { (error : Error?) in
+                if let theError = error {
+                    print("error adding request:\(theError)")// Handle any errors
+                }
+            }
+            print("added request to notification center")
+        }
+    }
 }
 
 
