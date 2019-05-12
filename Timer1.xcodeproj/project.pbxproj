@@ -7,14 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF30C50A2287314200EBC18F /* ting.caf in Resources */ = {isa = PBXBuildFile; fileRef = BF30C5092287314200EBC18F /* ting.caf */; };
+		BF597F4C226368360018BDB2 /* SettingHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF597F4B226368350018BDB2 /* SettingHolder.swift */; };
+		BF597F4E2263A7CE0018BDB2 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF597F4D2263A7CE0018BDB2 /* SettingsViewController.swift */; };
 		BF9246C82251452E00C613AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9246C72251452E00C613AA /* AppDelegate.swift */; };
 		BF9246CA2251452E00C613AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9246C92251452E00C613AA /* ViewController.swift */; };
 		BF9246CD2251452E00C613AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF9246CB2251452E00C613AA /* Main.storyboard */; };
 		BF9246CF2251453000C613AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF9246CE2251453000C613AA /* Assets.xcassets */; };
 		BF9246D22251453000C613AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF9246D02251453000C613AA /* LaunchScreen.storyboard */; };
+		BF9246DD2251586000C613AA /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF9246DC2251586000C613AA /* AVFoundation.framework */; };
+		BF9246DF22515FE000C613AA /* ting.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BF9246DE22515FE000C613AA /* ting.mp3 */; };
+		BF99267A227EFC0F004E74EF /* meliting_clock.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BF992679227EFC0F004E74EF /* meliting_clock.jpg */; };
+		BF99267C227F0B85004E74EF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF99267B227F0B85004E74EF /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BF30C5092287314200EBC18F /* ting.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = ting.caf; path = ../../../Downloads/ting.caf; sourceTree = "<group>"; };
+		BF597F4B226368350018BDB2 /* SettingHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingHolder.swift; sourceTree = "<group>"; };
+		BF597F4D2263A7CE0018BDB2 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		BF9246C42251452E00C613AA /* Timer1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Timer1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF9246C72251452E00C613AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF9246C92251452E00C613AA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +32,10 @@
 		BF9246CE2251453000C613AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF9246D12251453000C613AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF9246D32251453000C613AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF9246DC2251586000C613AA /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		BF9246DE22515FE000C613AA /* ting.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = ting.mp3; path = ../../../Downloads/ting.mp3; sourceTree = "<group>"; };
+		BF992679227EFC0F004E74EF /* meliting_clock.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = meliting_clock.jpg; path = ../../meliting_clock.jpg; sourceTree = "<group>"; };
+		BF99267B227F0B85004E74EF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF9246DD2251586000C613AA /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,8 +53,10 @@
 		BF9246BB2251452E00C613AA = {
 			isa = PBXGroup;
 			children = (
+				BF99267B227F0B85004E74EF /* Default-568h@2x.png */,
 				BF9246C62251452E00C613AA /* Timer1 */,
 				BF9246C52251452E00C613AA /* Products */,
+				BF9246DB2251586000C613AA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,12 +73,25 @@
 			children = (
 				BF9246C72251452E00C613AA /* AppDelegate.swift */,
 				BF9246C92251452E00C613AA /* ViewController.swift */,
+				BF597F4B226368350018BDB2 /* SettingHolder.swift */,
 				BF9246CB2251452E00C613AA /* Main.storyboard */,
+				BF597F4D2263A7CE0018BDB2 /* SettingsViewController.swift */,
 				BF9246CE2251453000C613AA /* Assets.xcassets */,
+				BF30C5092287314200EBC18F /* ting.caf */,
+				BF992679227EFC0F004E74EF /* meliting_clock.jpg */,
+				BF9246DE22515FE000C613AA /* ting.mp3 */,
 				BF9246D02251453000C613AA /* LaunchScreen.storyboard */,
 				BF9246D32251453000C613AA /* Info.plist */,
 			);
 			path = Timer1;
+			sourceTree = "<group>";
+		};
+		BF9246DB2251586000C613AA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF9246DC2251586000C613AA /* AVFoundation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +126,11 @@
 				TargetAttributes = {
 					BF9246C32251452E00C613AA = {
 						CreatedOnToolsVersion = 10.2;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -122,9 +157,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF9246DF22515FE000C613AA /* ting.mp3 in Resources */,
 				BF9246D22251453000C613AA /* LaunchScreen.storyboard in Resources */,
 				BF9246CF2251453000C613AA /* Assets.xcassets in Resources */,
+				BF30C50A2287314200EBC18F /* ting.caf in Resources */,
+				BF99267A227EFC0F004E74EF /* meliting_clock.jpg in Resources */,
 				BF9246CD2251452E00C613AA /* Main.storyboard in Resources */,
+				BF99267C227F0B85004E74EF /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,7 +175,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF9246CA2251452E00C613AA /* ViewController.swift in Sources */,
+				BF597F4C226368360018BDB2 /* SettingHolder.swift in Sources */,
 				BF9246C82251452E00C613AA /* AppDelegate.swift in Sources */,
+				BF597F4E2263A7CE0018BDB2 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +326,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3FV25L4CU2;
 				INFOPLIST_FILE = Timer1/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -303,6 +345,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3FV25L4CU2;
 				INFOPLIST_FILE = Timer1/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

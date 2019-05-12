@@ -1,24 +1,161 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina3_5" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Timer1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ech-kQ-zvL">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="700"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Zqh-FN-L9u">
+                                        <rect key="frame" x="0.0" y="0.0" width="480" height="700"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="meliting_clock.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="CDd-3O-knL">
+                                                <rect key="frame" x="0.0" y="0.0" width="404" height="700"/>
+                                            </imageView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="SZA-j8-MPz">
+                                                <rect key="frame" x="412" y="252" width="68" height="196"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="27" translatesAutoresizingMaskIntoConstraints="NO" id="DJh-cP-UK9">
+                                                        <rect key="frame" x="20" y="0.0" width="28" height="40"/>
+                                                        <color key="textColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fdm-Ij-8jl">
+                                                        <rect key="frame" x="7" y="48" width="54" height="44"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                        <state key="normal" title="Start">
+                                                            <color key="titleColor" red="1" green="0.1349926789" blue="0.16710969519999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="startTimer" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZUC-xP-QI8"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Edc-Nw-AyC">
+                                                        <rect key="frame" x="0.0" y="100" width="68" height="44"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                        <state key="normal" title="Pause">
+                                                            <color key="titleColor" red="1" green="0.1349926789" blue="0.16710969519999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="togglePause" destination="BYZ-38-t0r" eventType="touchUpInside" id="WQb-CW-lQX"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QCP-EW-u1w">
+                                                        <rect key="frame" x="0.0" y="152" width="68" height="44"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                        <state key="normal" title="Set Time"/>
+                                                        <connections>
+                                                            <segue destination="oxa-n8-KRt" kind="show" id="uop-5b-rKb"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="CDd-3O-knL" secondAttribute="bottom" constant="216" id="Wfo-mo-R3u"/>
+                                        </constraints>
+                                        <variation key="heightClass=compact" axis="horizontal"/>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Zqh-FN-L9u" firstAttribute="leading" secondItem="ech-kQ-zvL" secondAttribute="leading" id="AyQ-P1-9cm"/>
+                                    <constraint firstItem="Zqh-FN-L9u" firstAttribute="top" secondItem="ech-kQ-zvL" secondAttribute="top" id="S6Q-mh-glu"/>
+                                    <constraint firstAttribute="trailing" secondItem="Zqh-FN-L9u" secondAttribute="trailing" id="dHF-ac-f4V"/>
+                                    <constraint firstAttribute="bottom" secondItem="Zqh-FN-L9u" secondAttribute="bottom" id="xgD-v8-DVT"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ech-kQ-zvL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="0X8-2P-HKj"/>
+                            <constraint firstAttribute="trailing" secondItem="ech-kQ-zvL" secondAttribute="trailing" id="Edn-js-INP"/>
+                            <constraint firstItem="ech-kQ-zvL" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="F0K-2f-UnV"/>
+                            <constraint firstAttribute="bottom" secondItem="ech-kQ-zvL" secondAttribute="bottom" id="HJ0-hU-cod"/>
+                            <constraint firstItem="ech-kQ-zvL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Mb2-2E-LTN"/>
+                            <constraint firstItem="ech-kQ-zvL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="UIB-iv-bD7"/>
+                            <constraint firstItem="ech-kQ-zvL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="XvM-2u-Ee0"/>
+                            <constraint firstItem="ech-kQ-zvL" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="a5H-XR-nI6"/>
+                            <constraint firstItem="ech-kQ-zvL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bUa-8S-5bN"/>
+                            <constraint firstItem="ech-kQ-zvL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ejV-Zp-60n"/>
+                            <constraint firstItem="ech-kQ-zvL" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="tSZ-6p-rqu"/>
+                            <constraint firstItem="ech-kQ-zvL" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="zEM-VB-gpJ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="labelClock" destination="DJh-cP-UK9" id="7qo-tl-1Sx"/>
+                        <outlet property="pauseButton" destination="Edc-Nw-AyC" id="TRP-QB-2Un"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="34.399999999999999" y="18.440779610194905"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="gdI-IA-nFZ">
+            <objects>
+                <viewController id="oxa-n8-KRt" customClass="SettingsViewController" customModule="Timer1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IVF-OC-F3C">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="9p7-Gd-Qho">
+                                <rect key="frame" x="0.0" y="55" width="480" height="210"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cZc-9w-eaJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="480" height="48"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                        <state key="normal" title="Main screen"/>
+                                        <connections>
+                                            <action selector="setDefaultTime" destination="oxa-n8-KRt" eventType="touchUpInside" id="MNF-vZ-qge"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="F30-OF-C9A"/>
+                                        </connections>
+                                    </button>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xF7-xR-dq9">
+                                        <rect key="frame" x="0.0" y="48" width="480" height="162"/>
+                                    </pickerView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="cZc-9w-eaJ" firstAttribute="centerX" secondItem="9p7-Gd-Qho" secondAttribute="centerX" id="b1x-p5-z7v"/>
+                                    <constraint firstItem="xF7-xR-dq9" firstAttribute="centerX" secondItem="cZc-9w-eaJ" secondAttribute="centerX" id="us7-pt-WLQ"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="9p7-Gd-Qho" firstAttribute="leading" secondItem="K5B-Wq-f6f" secondAttribute="leading" id="Cb1-7r-jcL"/>
+                            <constraint firstItem="9p7-Gd-Qho" firstAttribute="centerY" secondItem="K5B-Wq-f6f" secondAttribute="centerY" id="NAy-vu-WHN"/>
+                            <constraint firstItem="K5B-Wq-f6f" firstAttribute="trailing" secondItem="9p7-Gd-Qho" secondAttribute="trailing" id="zEM-zf-RPv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="K5B-Wq-f6f"/>
+                    </view>
+                    <connections>
+                        <outlet property="picker" destination="xF7-xR-dq9" id="K3C-qk-zYW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aiD-u8-DUE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="773.91304347826087" y="18.75"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="meliting_clock.jpg" width="500" height="700"/>
+    </resources>
 </document>
