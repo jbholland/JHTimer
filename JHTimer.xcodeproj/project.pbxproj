@@ -25,7 +25,7 @@
 		BF30C5092287314200EBC18F /* ting.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = ting.caf; path = ../../../Downloads/ting.caf; sourceTree = "<group>"; };
 		BF597F4B226368350018BDB2 /* SettingHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingHolder.swift; sourceTree = "<group>"; };
 		BF597F4D2263A7CE0018BDB2 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		BF9246C42251452E00C613AA /* Timer1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Timer1.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF9246C42251452E00C613AA /* JHTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JHTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF9246C72251452E00C613AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF9246C92251452E00C613AA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BF9246CC2251452E00C613AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -63,7 +63,7 @@
 		BF9246C52251452E00C613AA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BF9246C42251452E00C613AA /* Timer1.app */,
+				BF9246C42251452E00C613AA /* JHTimer.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -97,9 +97,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BF9246C32251452E00C613AA /* Timer1 */ = {
+		BF9246C32251452E00C613AA /* JHTimer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BF9246D62251453100C613AA /* Build configuration list for PBXNativeTarget "Timer1" */;
+			buildConfigurationList = BF9246D62251453100C613AA /* Build configuration list for PBXNativeTarget "JHTimer" */;
 			buildPhases = (
 				BF9246C02251452E00C613AA /* Sources */,
 				BF9246C12251452E00C613AA /* Frameworks */,
@@ -109,9 +109,9 @@
 			);
 			dependencies = (
 			);
-			name = Timer1;
+			name = JHTimer;
 			productName = Timer1;
-			productReference = BF9246C42251452E00C613AA /* Timer1.app */;
+			productReference = BF9246C42251452E00C613AA /* JHTimer.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -134,7 +134,7 @@
 					};
 				};
 			};
-			buildConfigurationList = BF9246BF2251452E00C613AA /* Build configuration list for PBXProject "Timer1" */;
+			buildConfigurationList = BF9246BF2251452E00C613AA /* Build configuration list for PBXProject "JHTimer" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -147,7 +147,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BF9246C32251452E00C613AA /* Timer1 */,
+				BF9246C32251452E00C613AA /* JHTimer */,
 			);
 		};
 /* End PBXProject section */
@@ -360,7 +360,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BF9246BF2251452E00C613AA /* Build configuration list for PBXProject "Timer1" */ = {
+		BF9246BF2251452E00C613AA /* Build configuration list for PBXProject "JHTimer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BF9246D42251453100C613AA /* Debug */,
@@ -369,7 +369,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BF9246D62251453100C613AA /* Build configuration list for PBXNativeTarget "Timer1" */ = {
+		BF9246D62251453100C613AA /* Build configuration list for PBXNativeTarget "JHTimer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BF9246D72251453100C613AA /* Debug */,
