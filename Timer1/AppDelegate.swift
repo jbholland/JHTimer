@@ -23,6 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             // Enable or disable features based on authorization.
         }
         // Override point for customization after application launch.
+        application.isIdleTimerDisabled = true
         return true
     }
     
@@ -31,12 +32,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
         settingHolder.suspendTime = Date.init()
         
-        settingHolder.queueBellInBackground()
+     //   settingHolder.queueBellInBackground()
         
     }
     
     func applicationDidEnterBackground(_ application: UIApplication) {
        // let vc = window?.rootViewController   as? ViewController
+        settingHolder.suspendTime = Date.init()
+        
+     //   settingHolder.queueBellInBackground()
         
       //  vc?.queueBellInBackground()
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
@@ -49,12 +53,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       //  let vc = window?.rootViewController   as? ViewController
         
       //  vc?.dequeueBellInBackground()
-        
+    //    settingHolder.dequeueBellInBackground()
+        if (!settingHolder.paused){
+            let timeInBackground = Date.init().timeIntervalSince(settingHolder.suspendTime)
+            settingHolder.timeRemaining -= Int(timeInBackground)
+        }
     }
     
     func applicationDidBecomeActive(_ application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-        settingHolder.dequeueBellInBackground()
+  //      settingHolder.dequeueBellInBackground()
         if (!settingHolder.paused){
             let timeInBackground = Date.init().timeIntervalSince(settingHolder.suspendTime)
             settingHolder.timeRemaining -= Int(timeInBackground)

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina3_5" orientation="landscape">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -14,31 +14,35 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Timer1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="JHTimer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ech-kQ-zvL">
-                                <rect key="frame" x="0.0" y="0.0" width="480" height="700"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Zqh-FN-L9u">
-                                        <rect key="frame" x="0.0" y="0.0" width="480" height="700"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="meliting_clock.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="CDd-3O-knL">
-                                                <rect key="frame" x="0.0" y="0.0" width="404" height="700"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="332"/>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="SZA-j8-MPz">
-                                                <rect key="frame" x="412" y="252" width="68" height="196"/>
+                                                <rect key="frame" x="110.5" y="352" width="99" height="196"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="27" translatesAutoresizingMaskIntoConstraints="NO" id="DJh-cP-UK9">
-                                                        <rect key="frame" x="20" y="0.0" width="28" height="40"/>
+                                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="27" translatesAutoresizingMaskIntoConstraints="NO" id="DJh-cP-UK9">
+                                                        <rect key="frame" x="35.5" y="0.0" width="28" height="40"/>
+                                                        <accessibility key="accessibilityConfiguration">
+                                                            <accessibilityTraits key="traits" notEnabled="YES"/>
+                                                            <bool key="isElement" value="NO"/>
+                                                        </accessibility>
                                                         <color key="textColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fdm-Ij-8jl">
-                                                        <rect key="frame" x="7" y="48" width="54" height="44"/>
+                                                        <rect key="frame" x="22.5" y="48" width="54" height="44"/>
                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                                         <state key="normal" title="Start">
                                                             <color key="titleColor" red="1" green="0.1349926789" blue="0.16710969519999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -48,7 +52,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Edc-Nw-AyC">
-                                                        <rect key="frame" x="0.0" y="100" width="68" height="44"/>
+                                                        <rect key="frame" x="15.5" y="100" width="68" height="44"/>
                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                                         <state key="normal" title="Pause">
                                                             <color key="titleColor" red="1" green="0.1349926789" blue="0.16710969519999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -58,7 +62,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QCP-EW-u1w">
-                                                        <rect key="frame" x="0.0" y="152" width="68" height="44"/>
+                                                        <rect key="frame" x="0.0" y="152" width="99" height="44"/>
                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                                         <state key="normal" title="Set Time"/>
                                                         <connections>
@@ -111,16 +115,16 @@
         <!--Settings View Controller-->
         <scene sceneID="gdI-IA-nFZ">
             <objects>
-                <viewController id="oxa-n8-KRt" customClass="SettingsViewController" customModule="Timer1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="oxa-n8-KRt" customClass="SettingsViewController" customModule="JHTimer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IVF-OC-F3C">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="9p7-Gd-Qho">
-                                <rect key="frame" x="0.0" y="55" width="480" height="210"/>
+                                <rect key="frame" x="0.0" y="162" width="320" height="264"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cZc-9w-eaJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="480" height="48"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="48"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                         <state key="normal" title="Main screen"/>
                                         <connections>
@@ -129,7 +133,7 @@
                                         </connections>
                                     </button>
                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xF7-xR-dq9">
-                                        <rect key="frame" x="0.0" y="48" width="480" height="162"/>
+                                        <rect key="frame" x="0.0" y="48" width="320" height="216"/>
                                     </pickerView>
                                 </subviews>
                                 <constraints>

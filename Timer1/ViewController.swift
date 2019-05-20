@@ -25,8 +25,10 @@ class ViewController: UIViewController {
         settingHolder.paused = !settingHolder.paused
         if (settingHolder.paused) {
             pauseButton.setTitle("Continue", for: UIControl.State.normal)
+            settingHolder.dequeueBellInBackground()
         } else {
             pauseButton.setTitle("Pause",for: UIControl.State.normal)
+            settingHolder.queueBellInBackground()
         }
     }
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
@@ -51,6 +53,7 @@ class ViewController: UIViewController {
         dateComponentsFormatter.allowedUnits = [.hour , .minute, .second]
         settingHolder.prepareAudioSession()
         updateLabel()
+
     }
     
     
@@ -74,6 +77,7 @@ class ViewController: UIViewController {
             settingHolder.timer = nil
         }
         settingHolder.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateLabel), userInfo: nil, repeats:true);
+        settingHolder.queueBellInBackground()
     }
     
     
@@ -86,9 +90,12 @@ class ViewController: UIViewController {
                 
                 labelClock?.text = dateComponentsFormatter.string(from: TimeInterval(Float(settingHolder.desiredTime ?? 0)))
             } else {
-                labelClock?.text = dateComponentsFormatter.string(from: TimeInterval(Float(settingHolder.timeRemaining)))
+                labelClock?.text = dateComponentsFormatter.string(from: TimeInterval(Float(settingHolder.timeRemaining - 1)))
                 
                 settingHolder.updateTimer()
+                if (settingHolder.timeRemaining < 1){
+                    labelClock?.text = dateComponentsFormatter.string(from: TimeInterval(Float(0)))
+                }
             }
         }
     }

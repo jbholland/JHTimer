@@ -52,18 +52,6 @@ class SettingHolder {
     }
     
     var desiredTime:Int?
-    /*{
-        didSet(newValue) {
-            if (newValue != nil) {
-                 if (newValue! < 1) {
-                    timeRemaining = 10
-                } else {
-                    timeRemaining = newValue!
-                }
-                print("desired time set to: \(timeRemaining)")
-            }
-        }
-    } */
     
     var suspendTime:Date = Date.init()
     
@@ -107,18 +95,18 @@ class SettingHolder {
     
     func updateTimer() {
         if  timeRemaining >= 0 {
-            if timeRemaining < 1  && !playedSound {
-                playedSound = true
-                
-                playSound()
+            if timeRemaining < 1   {
+                if (!playedSound) {
+                    playedSound = true
+                    playSound()
+                }
                 if (timer != nil){
                     timer?.invalidate()
-                    timer = nil
-                    timeRemaining = getDesiredTime()!
-                    //
+                    timer = nil//
                     playedSound = false
-                    timeRemaining = 0
                 }
+                timeRemaining = 0
+                
                 
             } else {
                 if timeRemaining > 0 {
