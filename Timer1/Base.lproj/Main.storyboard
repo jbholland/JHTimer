@@ -126,7 +126,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cZc-9w-eaJ">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="48"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
-                                        <state key="normal" title="Main screen"/>
+                                        <state key="normal" title="Return to Timer"/>
                                         <connections>
                                             <action selector="setDefaultTime" destination="oxa-n8-KRt" eventType="touchUpInside" id="MNF-vZ-qge"/>
                                             <segue destination="BYZ-38-t0r" kind="show" id="F30-OF-C9A"/>

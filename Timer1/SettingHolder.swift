@@ -1,6 +1,6 @@
 //
 //  SettingHolder.swift
-//  Timer1
+//  JHTimer
 //
 //  Created by John Holland on 4/14/19.
 //  Copyright © 2019 John Holland. All rights reserved.
@@ -65,14 +65,15 @@ class SettingHolder {
     }
     
     func playSound() {
+        print("playing sound from playSound()")
         audioPlayer.play()
     }
-    func prepareAudioSession() -> Void {
+    func prepareAudioSession(filename:String) -> Void {
         do {
             try AVAudioSession.sharedInstance().setCategory(.playAndRecord, mode: .default, options: [])
             try AVAudioSession.sharedInstance().setActive(true)
             try AVAudioSession.sharedInstance().overrideOutputAudioPort(AVAudioSession.PortOverride.speaker)
-            let audioFileName = "ting"
+            let audioFileName = filename
             let audioFileExtension = "mp3"
             guard let filePath = Bundle.main.path(forResource: audioFileName, ofType: audioFileExtension) else {
                 print("Audio file not found at specified path")
@@ -98,6 +99,7 @@ class SettingHolder {
             if timeRemaining < 1   {
                 if (!playedSound) {
                     playedSound = true
+                    prepareAudioSession(filename: "ting")
                     playSound()
                 }
                 if (timer != nil){

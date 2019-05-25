@@ -1,6 +1,6 @@
 //
 //  SettingsViewController.swift
-//  Timer1
+//  JHTimer
 //
 //  Created by John Holland on 4/14/19.
 //  Copyright © 2019 John Holland. All rights reserved.
@@ -11,7 +11,7 @@ import UIKit
 class SettingsViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
     
     var settingHolder:SettingHolder = SettingHolder.shared
-   
+    
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         get {
             return .portrait
@@ -19,7 +19,7 @@ class SettingsViewController: UIViewController,UIPickerViewDelegate,UIPickerView
         }
     }
     
-     override func viewDidLoad() {
+    override func viewDidLoad() {
         super.viewDidLoad()
         let defaults = UserDefaults.standard
         let desiredTime = defaults.integer(forKey:"Time")
@@ -38,28 +38,22 @@ class SettingsViewController: UIViewController,UIPickerViewDelegate,UIPickerView
     override func viewWillAppear(_ animated: Bool) {
         settingHolder.started = false
         settingHolder.paused  = false
-        }
+    }
     
     @IBAction func setDefaultTime() {
         settingHolder.defaults.set(settingHolder.desiredTime, forKey:"Time")
         
         
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let target = segue.destination as? ViewController {
+            target.labelClock?.text = target.dateComponentsFormatter.string(from:
+                TimeInterval(Float(settingHolder.timeRemaining)))
+        }
+    }
     @IBOutlet weak var picker: UIPickerView!
-   
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
-    
-    
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 3
     }
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {

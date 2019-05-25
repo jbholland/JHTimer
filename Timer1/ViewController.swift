@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  Timer1
+//  JHTimer
 //
 //  Created by John Holland on 3/31/19.
 //  Copyright © 2019 John Holland. All rights reserved.
@@ -51,9 +51,9 @@ class ViewController: UIViewController {
         dateComponentsFormatter.unitsStyle = .positional
         dateComponentsFormatter.zeroFormattingBehavior = .pad
         dateComponentsFormatter.allowedUnits = [.hour , .minute, .second]
-        settingHolder.prepareAudioSession()
+        settingHolder.prepareAudioSession(filename: "ting")
         updateLabel()
-
+        
     }
     
     
@@ -69,8 +69,8 @@ class ViewController: UIViewController {
         labelClock?.text = dateComponentsFormatter.string(from:
             TimeInterval(Float(settingHolder.timeRemaining)))
         
-        settingHolder.prepareAudioSession()
-        
+        settingHolder.prepareAudioSession(filename: "3Han")
+        settingHolder.playSound()
         
         if (settingHolder.timer != nil){
             settingHolder.timer?.invalidate()
