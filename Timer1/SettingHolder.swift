@@ -125,7 +125,7 @@ class SettingHolder {
         }
     }
     func queueBellInBackground() {
-        if (!paused) {
+        if (!paused && timeRemaining > 0) {
             
             let interval:TimeInterval =  TimeInterval(timeRemaining)
             let content = UNMutableNotificationContent()

@@ -29,7 +29,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="332"/>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="SZA-j8-MPz">
-                                                <rect key="frame" x="110.5" y="352" width="99" height="196"/>
+                                                <rect key="frame" x="110.5" y="340" width="99" height="208"/>
                                                 <subviews>
                                                     <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="27" translatesAutoresizingMaskIntoConstraints="NO" id="DJh-cP-UK9">
                                                         <rect key="frame" x="35.5" y="0.0" width="28" height="40"/>
@@ -69,6 +69,12 @@
                                                             <segue destination="oxa-n8-KRt" kind="show" id="uop-5b-rKb"/>
                                                         </connections>
                                                     </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9iB-P0-l58">
+                                                        <rect key="frame" x="24.5" y="204" width="50" height="4"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                 </subviews>
                                             </stackView>
                                         </subviews>
@@ -90,16 +96,16 @@
                         <constraints>
                             <constraint firstItem="ech-kQ-zvL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="0X8-2P-HKj"/>
                             <constraint firstAttribute="trailing" secondItem="ech-kQ-zvL" secondAttribute="trailing" id="Edn-js-INP"/>
-                            <constraint firstItem="ech-kQ-zvL" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="F0K-2f-UnV"/>
                             <constraint firstAttribute="bottom" secondItem="ech-kQ-zvL" secondAttribute="bottom" id="HJ0-hU-cod"/>
                             <constraint firstItem="ech-kQ-zvL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Mb2-2E-LTN"/>
+                            <constraint firstAttribute="bottom" secondItem="ech-kQ-zvL" secondAttribute="bottom" id="PZO-9T-fby"/>
                             <constraint firstItem="ech-kQ-zvL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="UIB-iv-bD7"/>
                             <constraint firstItem="ech-kQ-zvL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="XvM-2u-Ee0"/>
                             <constraint firstItem="ech-kQ-zvL" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="a5H-XR-nI6"/>
                             <constraint firstItem="ech-kQ-zvL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bUa-8S-5bN"/>
                             <constraint firstItem="ech-kQ-zvL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ejV-Zp-60n"/>
+                            <constraint firstItem="ech-kQ-zvL" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="oT8-Wl-PDh"/>
                             <constraint firstItem="ech-kQ-zvL" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="tSZ-6p-rqu"/>
-                            <constraint firstItem="ech-kQ-zvL" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="zEM-VB-gpJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
