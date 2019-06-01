@@ -99,7 +99,7 @@ class SettingHolder {
             if timeRemaining < 1   {
                 if (!playedSound) {
                     playedSound = true
-                    prepareAudioSession(filename: "ting")
+                    prepareAudioSession(filename: "bell")
                     playSound()
                 }
                 if (timer != nil){

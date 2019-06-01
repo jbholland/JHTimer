@@ -51,7 +51,7 @@ class ViewController: UIViewController {
         dateComponentsFormatter.unitsStyle = .positional
         dateComponentsFormatter.zeroFormattingBehavior = .pad
         dateComponentsFormatter.allowedUnits = [.hour , .minute, .second]
-        settingHolder.prepareAudioSession(filename: "ting")
+        settingHolder.prepareAudioSession(filename: "bell")
         updateLabel()
         
     }
@@ -69,7 +69,7 @@ class ViewController: UIViewController {
         labelClock?.text = dateComponentsFormatter.string(from:
             TimeInterval(Float(settingHolder.timeRemaining)))
         
-        settingHolder.prepareAudioSession(filename: "3Han")
+        settingHolder.prepareAudioSession(filename: "Hanlong")
         settingHolder.playSound()
         
         if (settingHolder.timer != nil){
