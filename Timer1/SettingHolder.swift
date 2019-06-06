@@ -129,8 +129,8 @@ class SettingHolder {
             
             let interval:TimeInterval =  TimeInterval(timeRemaining)
             let content = UNMutableNotificationContent()
-            content.sound = UNNotificationSound(named: UNNotificationSoundName(rawValue: "ting.caf"))
-            print("setting notification center  seconds: \(timeRemaining)")
+            content.sound = UNNotificationSound(named: UNNotificationSoundName(rawValue: "bell.caf"))
+            print("setting notification center seconds: \(timeRemaining)")
             let trigger = UNTimeIntervalNotificationTrigger(timeInterval:interval, repeats: false)
             let request = UNNotificationRequest(identifier: "Bell", content: content, trigger: trigger)
             let center = UNUserNotificationCenter.current()

@@ -20,6 +20,7 @@
 		BF9246DD2251586000C613AA /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF9246DC2251586000C613AA /* AVFoundation.framework */; };
 		BF99267A227EFC0F004E74EF /* meliting_clock.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BF992679227EFC0F004E74EF /* meliting_clock.jpg */; };
 		BF99267C227F0B85004E74EF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF99267B227F0B85004E74EF /* Default-568h@2x.png */; };
+		BFB90B1122A94D1F001E5317 /* bell.caf in Resources */ = {isa = PBXBuildFile; fileRef = BFB90B1022A94D1F001E5317 /* bell.caf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		BF9246DC2251586000C613AA /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		BF992679227EFC0F004E74EF /* meliting_clock.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = meliting_clock.jpg; path = ../../meliting_clock.jpg; sourceTree = "<group>"; };
 		BF99267B227F0B85004E74EF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		BFB90B1022A94D1F001E5317 /* bell.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = bell.caf; path = Timer1/bell.caf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 		BF9246BB2251452E00C613AA = {
 			isa = PBXGroup;
 			children = (
+				BFB90B1022A94D1F001E5317 /* bell.caf */,
 				BF99267B227F0B85004E74EF /* Default-568h@2x.png */,
 				BF9246C62251452E00C613AA /* Timer1 */,
 				BF9246C52251452E00C613AA /* Products */,
@@ -160,6 +163,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFB90B1122A94D1F001E5317 /* bell.caf in Resources */,
 				BF9246D22251453000C613AA /* LaunchScreen.storyboard in Resources */,
 				BF9246CF2251453000C613AA /* Assets.xcassets in Resources */,
 				BF1FCD3522A2EA2500553006 /* Hanlong.caf in Resources */,
